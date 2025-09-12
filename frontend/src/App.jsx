@@ -5,7 +5,6 @@ import Projects from './Project'
 import About from './About'
 import Contact from './Contact'
 import Popup from './PopUp'
-
 const App = () => {
   return (
     <div>

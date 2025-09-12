@@ -12,6 +12,7 @@ const projects = [
       "3 BR Apartments Off Shaheed Path, Lucknow UP RERA Registration No.: UPRERAPRJ330066/04/2025",
     rating: 4,
     reviews: 4.83,
+    link:"https://base-infra.com/listing/68b17ede2a22c8e92dad62b3"
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const projects = [
       "Gomti Nagar Extension, Lucknow. Shalimar marbella RERA No. - UPRERAPRJ460592/05/2024",
     rating: 4,
     reviews: 4.83,
+    link:"https://base-infra.com/listing/68b6b9253469f1dd008b84e1"
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ const projects = [
       "Gomti Nagar Extension , Lucknow.  UP RERA Registration No.:UPRERAPRJ6682",
     rating: 4,
     reviews: 4.83,
+    link:"https://base-infra.com/listing/68b153732a22c8e92dad0332"
   },
 ];
 
@@ -43,13 +46,14 @@ const Projects = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
              Projects
           </h2>
-         
+         <a href="https://base-infra.com/" className="text-sm font-extralight  hover:text-blue-500">view all ...</a>
         </div>
 
         {/* Projects grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div
+            <a
+            href={`${project.link}`}
               key={project.id}
               className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden"
             >
@@ -78,7 +82,7 @@ const Projects = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

@@ -2,16 +2,18 @@ import React, { useEffect, useState } from "react";
 import { FaCar, FaMoneyBill, FaPhone } from "react-icons/fa";
 
 const Popup = () => {
-  const [showPopup, setShowPopup] = useState(true); // controls popup visibility
-  const [loading, setLoading] = useState(false); // loading state for submit button
+  const [showPopup, setShowPopup] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phoneNumber: "",
+    number: "",
   });
 
-  // Handles input changes
+  const closePopup = () => {
+    setShowPopup(false);
+  };
   const changeHandler = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -19,6 +21,7 @@ const Popup = () => {
       [name]: value,
     }));
   };
+
   useEffect(() => {
     if (showPopup) {
       document.body.style.overflow = "hidden";
@@ -30,33 +33,63 @@ const Popup = () => {
     };
   }, [showPopup]);
 
-  // Handles form submit
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData); // logs form data
+
+    // Client-side validation
+    const nameValid = formData.name.trim().length >= 2;
+    const phoneValid = /^[6-9]\d{9}$/.test(formData.number);
+    const emailValid =
+      formData.email === "" ||
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim());
+
+    if (!nameValid) return alert("Please enter a valid name (min 2 chars).");
+    if (!phoneValid)
+      return alert("Please enter a valid 10-digit Indian phone number.");
+    if (!emailValid) return alert("Please enter a valid email address.");
 
     setLoading(true);
 
-    // Simulate API call
-    setTimeout(() => {
+    const payload = {
+      name: formData.name,
+      email: formData.email,
+      number: formData.number,
+    };
+
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbx4ZO6TBQ8xTQmuh-Rx6nNSn2tuoXkQ-RDWQXwUSf68tB9wayRJZQY2eNTqQDo4l3WEGw/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      alert("Thank you for your response!");
+      setFormData({ name: "", email: "", number: "" }); 
+      setShowPopup(false)
+      // reset state
+    } catch (err) {
+      console.error("Submission error:", err);
+      alert("Something went wrong!");
+    } finally {
       setLoading(false);
-      setShowPopup(false); // closes popup after submit
-    }, 1500);
+    }
   };
 
-  if (!showPopup) return null; // hide popup if closed
+  if (!showPopup) return null;
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div className="bg-white backdrop-blur-2xl w-[90%] max-w-md rounded-md shadow-lg relative">
-        {/* Close Button */}
         {/* <button
-          onClick={() => setShowPopup(false)}
-          className="absolute top-2 right-2 text-xl font-bold text-gray-600 hover:text-gray-800"
+          onClick={closePopup}
+          className="absolute top-2 right-2 text-xl font-bold text-gray-600"
         >
           &times;
         </button> */}
-
         {/* Header */}
         <div className="flex items-center divide-x-2 divide-green-800 p-4 border-b">
           <h1 className="font-norwester text-[#094723] text-4xl uppercase p-2">
@@ -112,15 +145,16 @@ const Popup = () => {
               required
               className="w-full border p-2 rounded focus:border-green-900 focus:outline-none focus:ring-0"
             />
+
             <div className="flex">
               <select className="border rounded-l p-2 bg-gray-100 focus:border-green-900 focus:outline-none focus:ring-0">
                 <option>India (+91)</option>
               </select>
               <input
                 type="tel"
-                placeholder="Phone Number"
-                name="phoneNumber"
-                value={formData.phoneNumber}
+                placeholder="number"
+                name="number"
+                value={formData.number}
                 onChange={changeHandler}
                 required
                 maxLength={10}
