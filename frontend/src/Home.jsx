@@ -89,6 +89,10 @@ const Home = () => {
       </h1>
       <br />
       <span className="text-3xl font-light pb-50">Property Sahi Dilayenge Yehi</span>
+      <div className="mt-5"> call us now: &nbsp;&nbsp; <a href="tel:+919919944401" className="hover:underline">
+            +91 9919944401
+          </a></div>
+    
 
       {/* Image in between - visible only on mobile/tablet */}
       <div className="my-6 lg:hidden">
