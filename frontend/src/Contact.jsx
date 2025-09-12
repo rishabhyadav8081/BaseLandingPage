@@ -67,7 +67,7 @@ const Contact = () => {
           </p>
 
           <p className="mt-4 font-bold underline">
-            <a href="mailto:mail@example.com">baseinfradev@gmail.com</a>
+            <a href="mailto:mail@example.com">baseinfrasolutions@gmail.com</a>
           </p>
         </div>
 

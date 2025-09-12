@@ -7,7 +7,6 @@ import { FaRegBuilding } from "react-icons/fa";
 import { FaRegSquareFull } from "react-icons/fa6";
 const Property = () => {
   const steps = [
-
     {
       icon: <FaRegBuilding className="w-12 h-12 text-orange-500" />,
       title: "Flats",
@@ -32,17 +31,31 @@ const Property = () => {
     <section className="w-full py-16 px-6 bg-white">
       <div className="max-w-6xl mx-auto text-center">
         {/* <p className="text-gray-500 mb-2">Three steps. Three minutes.</p> */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12">
-          Everything should be this easy.
+        <h2 className="text-xl sm:text-4xl md:text-5xl font-bold mb-12">
+          What We Bring to You
         </h2>
+        <div className="flex justify-around text-center">
 
-        {/* Steps grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center">
           {steps.map((step, index) => (
-            <a href={`https://base-infra.com/search/${step.title}`}key={index} className="flex flex-col items-center gap-4">
-            <a >{step.icon}</a>
-              <h3 className="text-lg font-semibold">{step.title}</h3>
-              <p className="text-gray-500 text-sm max-w-xs">{step.description}</p>
+            <a
+              href={`https://base-infra.com/search/${step.title}`}
+              key={index}
+              className="flex items-center gap-4"
+            >
+              {/* Mobile View (icon + title in one line, no description) */}
+              <div className="sm:hidden items-center gap-2">
+                <span>{step.icon}</span>
+                <h3 className="text-lg font-semibold">{step.title}</h3>
+              </div>
+
+              {/* Tablet & Larger (column layout with description) */}
+              <div className="hidden sm:flex flex-col items-center gap-4">
+                <span>{step.icon}</span>
+                <h3 className="text-lg font-semibold">{step.title}</h3>
+                <p className="text-gray-500 text-sm max-w-xs">
+                  {step.description}
+                </p>
+              </div>
             </a>
           ))}
         </div>

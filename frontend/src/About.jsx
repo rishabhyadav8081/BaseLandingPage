@@ -22,9 +22,9 @@ const About = () => {
 
             {/* Buttons */}
             <div className="flex gap-4 mb-10">
-              <button className="px-6 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition">
+              <a href="https://base-infra.com/contact" className="px-6 py-3 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition">
               Contact Us
-              </button>
+              </a>
              
             </div>
 

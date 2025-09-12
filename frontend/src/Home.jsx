@@ -77,10 +77,10 @@ const Home = () => {
     </div>
     <div className="">
     <section className="w-full bg-gradient-to-r from-blue-100 via-gray-100 to-orange-100 rounded-2xl p-6 md:p-12 lg:p-16">
-  <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10">
+  <div className="  flex items-center justify-center  flex-col lg:flex-row  lg:items-start  gap-10">
     
     {/* Left content */}
-    <div id="Home" className="flex-1 text-center lg:text-left">
+    <div id="Home" className="flex-1 sm:mt-20 text-centerlg:text-left">
       <p className="text-sm sm:text-base mb-2 text-green-900">
         Welcome to BASE Infra
       </p>
@@ -100,13 +100,13 @@ const Home = () => {
       </div>
 
       <p className="text-gray-600 max-w-md mx-auto lg:mx-0 m-8">
-        Base is your trusted partner in real estate, specializing in properties,
+        {/* Base is your trusted partner in real estate, specializing in properties,
         flats, and villas. We focus on understanding your unique needs and
         delivering the best options that match your lifestyle and budget. With
         a commitment to quality, transparency, and customer satisfaction, Base
         ensures every client finds not just a property, but a place to call
         home. Whether you’re buying, selling, or investing, we make the journey
-        seamless and rewarding.
+        seamless and rewarding. */}
       </p>
     </div>
 
