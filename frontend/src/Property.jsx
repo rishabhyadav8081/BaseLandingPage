@@ -9,6 +9,7 @@ const Property = () => {
   const steps = [
     {
       icon: <FaRegBuilding className="w-12 h-12 text-orange-500" />,
+      src:"https://www.jkcement.com/wp-content/uploads/2023/12/residential-building-with-windows-balconies-1024x683-jpg.webp",
       title: "Flats",
       description:
         "Base offers premium flats tailored to your lifestyle, providing the best options and personalized service to ensure comfort, convenience, and a home you’ll love.",

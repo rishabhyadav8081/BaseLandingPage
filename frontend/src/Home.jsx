@@ -97,7 +97,7 @@ const Home = () => {
       {/* Image in between - visible only on mobile/tablet */}
       <div className="my-6 lg:hidden">
         <img
-          src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://res.cloudinary.com/do3l4cb8e/image/upload/v1756460612/project_gallery/bjg1mrxvaf9nwosfbswk.jpg"
           alt="Modern House"
           className="w-full h-auto rounded-xl shadow-lg"
         />
@@ -117,7 +117,7 @@ const Home = () => {
     {/* Right image - visible only on laptop/desktop */}
     <div className="flex-1 hidden lg:block">
       <img
-        src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="https://res.cloudinary.com/do3l4cb8e/image/upload/v1756460612/project_gallery/bjg1mrxvaf9nwosfbswk.jpg"
         alt="Modern House"
         className="w-full h-auto rounded-xl shadow-lg"
       />

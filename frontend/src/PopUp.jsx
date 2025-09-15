@@ -84,12 +84,12 @@ const Popup = () => {
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div className="bg-white backdrop-blur-2xl w-[90%] max-w-md rounded-md shadow-lg relative">
-        {/* <button
+        <button
           onClick={closePopup}
           className="absolute top-2 right-2 text-xl font-bold text-gray-600"
         >
           &times;
-        </button> */}
+        </button>
         {/* Header */}
         <div className="flex items-center divide-x-2 divide-green-800 p-4 border-b">
           <h1 className="font-norwester text-[#094723] text-4xl uppercase p-2">
