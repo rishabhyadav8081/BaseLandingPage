@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { IoMdCall } from "react-icons/io";
 import img from "./assets/home.png";
+import banner from "./assets/banner.png";
+
 const Login = () => {
   const [formData, setFormData] = useState({ name: "", phone: "", email: "" });
   const [loading, setLoading] = useState(false);
@@ -51,12 +53,15 @@ const Login = () => {
   };
 
   return (
- <div className="h-screen flex gap-20 md:gap-0 flex-col lg:flex-row">
-  <div className="h-3/5 lg:h-full lg:w-3/5">
-    <img src={img} alt="" className="w-full h-full object-cover"  />
+ <div className="h-screen flex gap-0 md:gap-0 flex-col lg:flex-row">
+  <div className="h-3/5 lg:h-full lg:w-3/5 ">
+    <img src={img} alt="" className="w-full h-full object-cover "  />
   </div>
-  <div className="h-2/5 lg:h-full lg:w-2/5 flex justify-center">
-  <div className="lg:w-2/2 flex flex-col items-center justify-center  shadow-lg pb-9 w-full p-3">
+  <div className="h-full lg:h-full lg:w-2/5 flex justify-center flex-wrap">
+  <div className="lg:w-2/2 flex flex-col items-center justify-center w-full px-3">
+  <div className="ml-2">
+    <img className="m-auto" src={banner} alt="" />
+  </div>
       <h2 className="text-sm sm:text-2xl font-semibold text-center mb-2">
         Your Property Journey Starts Here
       </h2>
@@ -120,7 +125,7 @@ const Login = () => {
 
         <button
           type="submit"
-          className="w-full mt-8 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition"
+          className="w-full  py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition mt-3 mb-3 "
           disabled={loading}
         >
           {loading ? "Submitting..." : "Submit"}
