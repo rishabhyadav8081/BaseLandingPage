@@ -8,20 +8,20 @@ import { FaRegSquareFull } from "react-icons/fa6";
 const Property = () => {
   const steps = [
     {
-      icon: <FaRegBuilding className="w-12 h-12 text-orange-500" />,
+      icon: <FaRegBuilding className="w-12 h-8 text-orange-500" />,
       src:"https://www.jkcement.com/wp-content/uploads/2023/12/residential-building-with-windows-balconies-1024x683-jpg.webp",
       title: "Flats",
       description:
         "Base offers premium flats tailored to your lifestyle, providing the best options and personalized service to ensure comfort, convenience, and a home you’ll love.",
     },
     {
-      icon: <FaHouseChimney className="w-12 h-12 text-green-500" />,
+      icon: <FaHouseChimney className="w-12 h-8 text-green-500" />,
       title: "Villas",
       description:
         "At Base, we specialize in exquisite villas, offering personalized solutions and the best options to meet our customers’ needs, ensuring comfort, luxury, and a place to call home.",
     },
     {
-      icon: <FaRegSquareFull className="w-12 h-12 text-indigo-500" />,
+      icon: <FaRegSquareFull className="w-12 h-8 text-indigo-500" />,
       title: "Plots",
       description:
         "Base specializes in prime plots, offering the best opportunities to build your dream home. We provide personalized guidance to help our customers invest wisely and confidently.",
@@ -32,7 +32,7 @@ const Property = () => {
     <section className="w-full py-16 px-6 bg-white">
       <div className="max-w-6xl mx-auto text-center">
         {/* <p className="text-gray-500 mb-2">Three steps. Three minutes.</p> */}
-        <h2 className="text-xl sm:text-4xl md:text-5xl font-bold mb-12">
+        <h2 className="text-xl sm:text-4xl md:text-5xl font-bold mb-15 sm:mt-8">
           What We Bring to You
         </h2>
         <div className="flex justify-around text-center">
@@ -46,7 +46,7 @@ const Property = () => {
               {/* Mobile View (icon + title in one line, no description) */}
               <div className="sm:hidden items-center gap-2">
                 <span>{step.icon}</span>
-                <h3 className="text-lg font-semibold">{step.title}</h3>
+                <h3 className="text-md font-semibold">{step.title}</h3>
               </div>
 
               {/* Tablet & Larger (column layout with description) */}

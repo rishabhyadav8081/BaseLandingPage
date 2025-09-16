@@ -31,15 +31,15 @@ const About = () => {
             {/* Stats */}
             <div className="flex flex-wrap gap-10">
               <div>
-                <p className="text-3xl font-bold">10000+</p>
+                <p className="text-2xl font-bold">10000+</p>
                 <p className="text-gray-500">Customers</p>
               </div>
               <div>
-                <p className="text-3xl font-bold">3</p>
+                <p className="text-2xl font-bold">3</p>
                 <p className="text-gray-500">Offices</p>
               </div>
               <div>
-                <p className="text-3xl font-bold">850 Cr+</p>
+                <p className="text-2xl font-bold">850 Cr+</p>
                 <p className="text-gray-500">Property Sold</p>
               </div>
             </div>

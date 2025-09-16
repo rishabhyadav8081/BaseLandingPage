@@ -6,16 +6,18 @@ import About from './About'
 import Contact from './Contact'
 import Popup from './PopUp'
 import Tool from './Tool'
+import Login from './login'
 const App = () => {
   return (
     <div>
-      <Home/>
+      {/* <Home/>
       <Property/>
       <Tool/>
       <Projects/>
       <About/>
       <Contact/>
-      <Popup/>
+      <Popup/> */}
+      <Login/>
     </div>
   )
 }

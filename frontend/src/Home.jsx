@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 // import alk from "../assets/alk.jpg";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCall } from "react-icons/io5";
+
 import { IoMdClose } from "react-icons/io";
 
 const Home = () => {
@@ -15,7 +17,7 @@ const Home = () => {
 
   return (
     <>
-    <div className=" rounded-4xl  h-[70px] sm:h-[100px] w-full ">
+    <div className=" rounded-4xl  h-[70px] sm:h-[100px] w-full">
       {/* Background */}
       {/* <img className="h-full w-full object-cover" src='' alt="Background" /> */}
       <div className="inset-0 bg-black/40 ">
@@ -81,25 +83,25 @@ const Home = () => {
     
     {/* Left content */}
     <div id="Home" className="flex-1 sm:mt-20 text-centerlg:text-left">
-      <p className="text-sm sm:text-base mb-2 text-green-900">
+      <p className="text-md sm:text-base mb-8 text-green-900">
         Welcome to BASE Infra
       </p>
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-green-900">
-        Searching Property Search BASE
+      <h1 className="text-5xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-green-700">
+       <span></span> Searching Property Search &nbsp;&nbsp;<span className="text-green-900">BASE</span>
       </h1>
       <br />
-      <span className="text-3xl font-light pb-50">Property Sahi Dilayenge Yehi</span>
-      <div className="mt-5"> call us now: &nbsp;&nbsp; <a href="tel:+919919944401" className="hover:underline">
+      <span className="text-3xl font-light pb-50 ">Property Sahi Dilayenge Yehi</span>
+      <div className="mt-8 flex items-center gap-0"> <IoCall className="text-green-900"/> &nbsp;&nbsp; <a href="tel:+919919944401" className="hover:underline">
             +91 9919944401
           </a></div>
     
 
       {/* Image in between - visible only on mobile/tablet */}
-      <div className="my-6 lg:hidden">
+      <div className="my-15 lg:hidden ">
         <img
           src="https://res.cloudinary.com/do3l4cb8e/image/upload/v1756460612/project_gallery/bjg1mrxvaf9nwosfbswk.jpg"
           alt="Modern House"
-          className="w-full h-auto rounded-xl shadow-lg"
+          className="w-full h-[240px] rounded-xl shadow-lg "
         />
       </div>
 
@@ -115,7 +117,7 @@ const Home = () => {
     </div>
 
     {/* Right image - visible only on laptop/desktop */}
-    <div className="flex-1 hidden lg:block">
+    <div className="flex-1 hidden lg:block mt-20">
       <img
         src="https://res.cloudinary.com/do3l4cb8e/image/upload/v1756460612/project_gallery/bjg1mrxvaf9nwosfbswk.jpg"
         alt="Modern House"
