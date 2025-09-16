@@ -59,8 +59,8 @@ const Login = () => {
   </div>
   <div className="h-full lg:h-full lg:w-2/5 flex justify-center flex-wrap">
   <div className="lg:w-2/2 flex flex-col items-center justify-center w-full px-3">
-  <div className="ml-2">
-    <img className="m-auto" src={banner} alt="" />
+  <div className="ml-6">
+    <img className="" src={banner} alt="" />
   </div>
       <h2 className="text-sm sm:text-2xl font-semibold text-center mb-2">
         Your Property Journey Starts Here
