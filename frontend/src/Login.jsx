@@ -51,93 +51,84 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Wrapper for Hero + Form */}
-      <div className="flex flex-col justify-between lg:flex-row min-h-screen bg-[#ffffff]">
-        {/* Hero Section */}
-        <section
-          className="relative h-[40vh] lg:h-auto lg:w-2/2 bg-cover bg-center rounded-b-4xl lg:rounded-none"
-          style={{
-            backgroundImage: `url(${img})`,
-          }}
+ <div className="h-screen flex gap-20 md:gap-0 flex-col lg:flex-row">
+  <div className="h-3/5 lg:h-full lg:w-3/5">
+    <img src={img} alt="" className="w-full h-full object-cover"  />
+  </div>
+  <div className="h-2/5 lg:h-full lg:w-2/5 flex justify-center">
+  <div className="lg:w-2/2 flex flex-col items-center justify-center  shadow-lg pb-9 w-full p-3">
+      <h2 className="text-sm sm:text-2xl font-semibold text-center mb-2">
+        Your Property Journey Starts Here
+      </h2>
+      <p className="text-center text-gray-600 mb-6 flex justify-center items-center gap-2">
+        <IoMdCall />
+        <a
+          href="tel:9919944401"
+          className="text-green-900 font-semibold hover:underline"
         >
-          <div className="absolute "></div>
-        </section>
+          99199 44401
+        </a>
+      </p>
 
-        {/* Form Section */}
-        <section className="lg:w-1/2 flex flex-col justify-center px-6 py-10 shadow-lg">
-          <h2 className="text-sm sm:text-2xl font-semibold text-center mb-2">
-            Your Property Journey Starts Here
-          </h2>
-          <p className="text-center text-gray-600 mb-6 flex justify-center items-center gap-2">
-            <IoMdCall />
-            <a
-              href="tel:9919944401"
-              className="text-green-900 font-semibold hover:underline"
-            >
-              99199 44401
-            </a>
-          </p>
+      <form
+        onSubmit={handleSubmit}
+        className=" max-w-md mx-auto w-full"
+      >
+        <div>
+          <label className="block text-sm font-medium mb-1">
+            Full Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Enter your full name"
+            required
+            className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-900"
+          />
+        </div>
 
-          <form
-            onSubmit={handleSubmit}
-            className="space-y-5 max-w-md mx-auto w-full rounded-t-4xl"
-          >
-            <div>
-              <label className="block text-sm font-medium mb-1">
-                Full Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Enter your full name"
-                required
-                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-900"
-              />
-            </div>
+        <div>
+          <label className="block text-sm font-medium mb-1">
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="Enter your phone number"
+            required
+            maxLength={10}
+            className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-900"
+          />
+        </div>
 
-            <div>
-              <label className="block text-sm font-medium mb-1">
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="Enter your phone number"
-                required
-                maxLength={10}
-                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-900"
-              />
-            </div>
+        <div>
+          <label className="block text-sm font-medium mb-1">Email-ID</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Enter your email"
+            required
+            className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-900"
+          />
+        </div>
 
-            <div>
-              <label className="block text-sm font-medium mb-1">Email-ID</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Enter your email"
-                required
-                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-900"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full mt-8 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition"
-              disabled={loading}
-            >
-              {loading ? "Submitting..." : "Submit"}
-            </button>
-          </form>
-        </section>
-      </div>
+        <button
+          type="submit"
+          className="w-full mt-8 py-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition"
+          disabled={loading}
+        >
+          {loading ? "Submitting..." : "Submit"}
+        </button>
+      </form>
     </div>
+  </div>
+</div>
   );
 };
 
