@@ -3,6 +3,7 @@ import { useState } from "react";
 import { IoMdCall } from "react-icons/io";
 import img from "./assets/home.png";
 import banner from "./assets/banner.png";
+import Crousel from "./Crousel";
 
 const Login = () => {
   const [formData, setFormData] = useState({ name: "", phone: "", email: "" });
@@ -61,6 +62,9 @@ const Login = () => {
   <div className="lg:w-2/2 flex flex-col items-center justify-center w-full px-3">
   <div className="ml-6">
     <img className="" src={banner} alt="" />
+  </div>
+  <div className="mb-10 w-full h-20 flex items-center justify-center">
+  <Crousel/>
   </div>
       <h2 className="text-sm sm:text-2xl font-semibold text-center mb-2">
         Your Property Journey Starts Here
