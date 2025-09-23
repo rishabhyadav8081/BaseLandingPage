@@ -8,10 +8,12 @@ import emaar from  '../src/assets/7.png'
 import Jashn from  '../src/assets/jshnelevate.png'
 import eldeco from '../src/assets/logo.png'
 import pur from  '../src/assets/purvanchal.png'
-import shal from  '../src/assets/shalimar.png'
+import shalimar from  '../src/assets/shali.png'
 import ris from  '../src/assets/rishita.png'
 import pres from  '../src/assets/pres.png'
 import om from  '../src/assets/om.webp'
+import valencia from  '../src/assets/valencia.webp'
+import oneworld from  '../src/assets/oneworld.png'
 
 
 // import { right } from "inquirer/lib/utils/readline";
@@ -19,7 +21,7 @@ const Crousel = () => {
   const logoList = [
     { name: "One World", image: one },
     { name: "oro", image: oro },
-    { name: "dps ", image: dps },
+    // { name: "dps ", image: dps },
     { name: "Ternity", image: Ternity },
     { name: "emaar", image: emaar },  
     { name: "Jashn", image: Jashn },  
@@ -29,6 +31,12 @@ const Crousel = () => {
     {image:ris},
     {image:pres},
     {image:om},
+    {image:shalimar},
+    {image:valencia},
+    {image:oneworld},
+
+
+
 
 
 
